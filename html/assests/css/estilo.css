@@ -1,0 +1,341 @@
+/*/img/lady-justice-2388500_1920.jpg*/
+html{
+  width: 100%;
+}
+.ajus  {
+   height: 100vh;
+  }
+.retornocon{
+	
+	height: 100vh;
+}
+#infoum{
+	background-image: url(../img/hand-1917895_1280.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+#infodois{
+	background-image: url(../img/volleyball-520093_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.info{
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.7;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    width: 100%;
+    z-index: 0;
+    padding-bottom: 2em;  
+
+}
+.sobreinfo{
+	background-color:  #07713B; 
+	padding: 2em;
+}
+
+.fun{
+  color: black
+  /*background-color: #1A913A;*/
+}
+
+
+
+
+.cordepe{
+  color: black;
+	background-color:  #B6E0C7;
+	min-height: auto;
+}
+
+.servico:hover{
+	background-color: #07713B;
+	color: white;
+}
+ .h9{
+  height: 87vh
+ }
+
+.servico{
+	width: 100%;
+	margin-top: 2em;
+	padding: 1em;
+  min-height: 270px
+}
+
+
+.nudancatexto{
+	opacity: 0;
+  	-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+  	animation-delay: 2s;
+  	animation-duration: 2s;
+  	animation-fill-mode: both;
+    font-size: 200%;
+    color: #07713B;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  from {opacity: 0;}
+  to {opacity: 1;}
+ 
+}
+
+/* Standard syntax */
+@keyframes example {
+   from {opacity: 0;}
+  to {opacity: 1;}
+  
+}
+}
+
+.nudancabotao{
+	opacity: 0;
+  	-webkit-animation-name: novo; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+  	animation-delay: 3s;
+  	animation-duration: 1s;
+  	animation-fill-mode: both;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes novo {
+  from {opacity: 0;}
+  to {opacity: 1;}
+ 
+}
+
+/* Standard syntax */
+@keyframes example {
+   from {opacity: 0;}
+  to {opacity: 1;}
+  
+}
+}
+
+
+.corpo{
+	padding-bottom: 2em;
+}
+
+
+.menu{
+  background-color: #32AE6D;
+}
+
+.car{
+  
+--font-family-sans-serif: "PT Sans Caption",sans-serif;
+--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+font-family: PT Sans Caption,sans-serif;
+font-size: .875rem;
+font-weight: 400;
+line-height: 1.5;
+color: #212529;
+text-align: left;
+box-sizing: border-box;
+position: relative;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: transparent;
+background-clip: border-box;
+border: 0 solid rgba(0,0,0,.125);
+border-radius: 0;
+margin-bottom: 1.5rem!important;
+border-bottom: 1px solid rgba(0,0,0,.1);
+padding: 10px;
+}
+
+.si{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+--breakpoint-xs: 0;
+--breakpoint-sm: 576px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 992px;
+--breakpoint-xl: 1200px;
+--font-family-sans-serif: "PT Sans Caption",sans-serif;
+--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+font-family: PT Sans Caption,sans-serif;
+font-size: .875rem;
+font-weight: 400;
+line-height: 1.5;
+color: #212529;
+text-align: left;
+box-sizing: border-box;
+display: block;
+}
+
+
+.c{
+
+--font-family-sans-serif: "PT Sans Caption",sans-serif;
+--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+font-family: PT Sans Caption,sans-serif;
+font-size: .875rem;
+font-weight: 400;
+line-height: 1.5;
+color: #212529;
+text-align: left;
+box-sizing: border-box;
+position: relative;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: transparent;
+background-clip: border-box;
+/*border: 0 solid rgba(0,0,0,.125);*/
+border-radius: 0;
+/*margin-bottom: 1.5rem!important;*/
+border-bottom: 1px solid rgba(0,0,0,.1);
+padding: 10px;
+}
+
+.ajeitadordemargem{
+  margin: auto;
+}
+
+
+.ajj{
+  /*height: 100vh;*/
+}
+
+.a{
+  width: 100%;
+}
+.d{
+  padding: 10px;
+}
+.c{
+  margin-left: 10px
+}
+
+
+.btn-google{
+  color: white;
+  background-color: #FF4B4B
+}
+.btn-google:hover{
+  color: gray;
+  background-color: #FF4B4B
+}
+
+.btn-facebook{
+  color: white;
+  background-color: #1E37FF
+}
+.btn-facebook:hover{
+  color: gray;
+  background-color: #1E37FF
+}
+.aviso{
+  display: none;
+}
+
+
+
+.ajusi{
+  margin-right: 0;
+}
+
+
+#m{
+  background-color: #D3F7DF;
+}
+
+
+header.masthead {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background: linear-gradient(0deg, #4AAC34 0%, #097648 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+header.masthead .masthead-content {
+  z-index: 1;
+  position: relative;
+}
+
+header.masthead .masthead-content .masthead-heading {
+  font-size: 4rem;
+}
+
+header.masthead .masthead-content .masthead-subheading {
+  font-size: 2rem;
+}
+
+header.masthead .bg-circle {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  background: linear-gradient(0deg, #A9CA2E 0%, #07713B 100%);
+}
+
+header.masthead .bg-circle-1 {
+  height: 90rem;
+  width: 90rem;
+  bottom: -55rem;
+  left: -55rem;
+}
+
+header.masthead .bg-circle-2 {
+  height: 50rem;
+  width: 50rem;
+  top: -25rem;
+  right: -25rem;
+}
+
+header.masthead .bg-circle-3 {
+  height: 20rem;
+  width: 20rem;
+  bottom: -10rem;
+  right: 5%;
+}
+
+header.masthead .bg-circle-4 {
+  height: 30rem;
+  width: 30rem;
+  top: -5rem;
+  right: 35%;
+}
+
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: calc(10rem + 55px);
+    padding-bottom: 10rem;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 6rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 4rem;
+  }
+}
+
+.avv{
+  min-height: 100vh;
+}
