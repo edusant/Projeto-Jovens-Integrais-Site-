@@ -60,4 +60,23 @@ class ExampleTest extends TestCase
 
     }
 
+
+    public function test_segundo_formulario(){
+        $fachadaTurma = new FacadesTurma();
+        $dados = $fachadaTurma->FazendoAInscricaoDoSegundoFormulario(
+        [
+            "nome_responsavel" => "Antonio Silva",
+            "nascimento_responsavel" => "1964-12-08",
+            "telefone_responsavel" => "1106700104",
+            "grau_de_parentesco" => "Pai",
+            'user_id' => 2
+        ]
+        );
+        $this->assertEquals("Antonio Silva", $dados->nome_responsavel);
+        $this->assertEquals("1964-12-08", $dados->nascimento_responsavel);
+        $this->assertEquals("1106700104", $dados->telefone_responsavel);
+        $this->assertEquals("Pai", $dados->grau_de_parentesco);
+        $this->assertEquals(2, $dados->user_id);
+    }
+
 }
