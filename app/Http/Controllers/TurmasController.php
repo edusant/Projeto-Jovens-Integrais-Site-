@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Classes\Fachadas\FacadesTurma;
+use App\Rules\Candidato\ValidarTelefone;
 use App\Rules\Turma\RuleVerificarSeHaTurmaAtiva;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -53,7 +54,6 @@ class TurmasController extends Controller
         $data['titulo'] = 'Turmas Ativas';
         $facadesTurma = new FacadesTurma();
         $data['turma'] = $facadesTurma->retonarTurmaAtiva();
-
         return view('Administracao/TurmasAtivas', $data);
     }
 
@@ -73,7 +73,7 @@ class TurmasController extends Controller
             [
                 'nacionalidade' => 'required|string',
                 'estado_civil' => 'required|string',
-                'telefone' => 'required|numeric'
+                'telefone' => ['required','numeric', new ValidarTelefone]
 
             ]
             );
