@@ -13,7 +13,7 @@ class CadastroTerceiroForms implements Cadastro{
                 'renda'=> $request['renda'],
                 'quatidade_moradores_na_casa' => $request['quantidade'],
                 'ultimo_cargo' => $request['ultimocargo'],
-                'user_id' => Auth::user()->id
+                'user_id' => $request['user_id']
             ]);
     }
 

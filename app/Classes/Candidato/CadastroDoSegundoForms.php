@@ -14,7 +14,7 @@ class CadastroDoSegundoForms implements Cadastro{
                 "nascimento_responsavel" => $request['nascimento_responsavel'],
                 "telefone_responsavel" => $request['telefone_responsavel'],
                 "grau_de_parentesco" => $request['grau_de_parentesco'],
-                'user_id' => Auth::user()->id
+                'user_id' => $request['user_id']
             ]);
     }
 

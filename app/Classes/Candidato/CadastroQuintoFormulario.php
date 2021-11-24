@@ -11,7 +11,7 @@ class CadastroQuintoFormulario implements Cadastro{
             [
                 'grau' => $request['escolaridade'],
                 'periodo' => $request['periodo'],
-                'user_id' => Auth::user()->id
+                'user_id' => $request['user_id']
             ]);
     }
 

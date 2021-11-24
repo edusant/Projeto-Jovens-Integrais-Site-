@@ -90,7 +90,9 @@ class TurmasController extends Controller
     public function InscricaoSegundoForm(Request $request){
         // dd($request->all());
         $facadesTurma = new FacadesTurma();
-        if($facadesTurma->FazendoAInscricaoDoSegundoFormulario($request->all())){
+        $requisicao = $request->all();
+        $requisicao['user_id'] = Auth::user()->id;
+        if($facadesTurma->FazendoAInscricaoDoSegundoFormulario($requisicao)){
             // echo 'Cadastro feito com sucesso';
            return redirect()->route('form3');
         }
@@ -98,7 +100,9 @@ class TurmasController extends Controller
 
     public function InscricaoTerceiroForm(Request $request){
         $facadesTurma = new FacadesTurma();
-        if($facadesTurma->inscricaoTerceiroForm($request->all())){
+        $requisicao = $request->all();
+        $requisicao['user_id'] = Auth::user()->id;
+        if($facadesTurma->inscricaoTerceiroForm($requisicao)){
            return redirect()->route('form4');
         }
     }
@@ -106,7 +110,9 @@ class TurmasController extends Controller
     public function InscricaoQuartoForm(Request $request){
         // dd($request->all());
         $facadesTurma = new FacadesTurma();
-        if($facadesTurma->CadastroDeEndereco($request->all())){
+        $requisicao = $request->all();
+        $requisicao['user_id'] = Auth::user()->id;
+        if($facadesTurma->CadastroDeEndereco($requisicao)){
            return redirect()->route('form5');
         }
     }
@@ -114,7 +120,9 @@ class TurmasController extends Controller
     public function cadastroQuintoFormulario(Request $request){
         // dd($request->all());
         $facadesTurma = new FacadesTurma();
-        if($facadesTurma->inscricaoQuintoFormulario($request->all())){
+        $requisicao = $request->all();
+        $requisicao['user_id'] = Auth::user()->id;
+        if($facadesTurma->inscricaoQuintoFormulario($requisicao)){
            return redirect()->route('form6');
         }
 
