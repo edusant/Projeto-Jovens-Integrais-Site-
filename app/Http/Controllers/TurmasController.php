@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Classes\Fachadas\FacadesTurma;
+use App\Rules\Candidato\ValidarIdadeResponsavel;
 use App\Rules\Candidato\ValidarTelefone;
 use App\Rules\Turma\RuleVerificarSeHaTurmaAtiva;
 use Illuminate\Http\Request;
@@ -88,7 +89,15 @@ class TurmasController extends Controller
     }
 
     public function InscricaoSegundoForm(Request $request){
-        // dd($request->all());
+        $request->validate(
+            [
+                'nome_responsavel' => 'required|string',
+                'nascimento_responsavel' => ['required','date', new ValidarIdadeResponsavel],
+                'grau_de_parentesco' => ['required', 'string'],
+                'telefone_responsavel' => ['required','numeric', new ValidarTelefone]
+
+            ]
+            );
         $facadesTurma = new FacadesTurma();
         $requisicao = $request->all();
         $requisicao['user_id'] = Auth::user()->id;
