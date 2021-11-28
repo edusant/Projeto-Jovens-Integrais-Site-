@@ -101,4 +101,29 @@ class ExampleTest extends TestCase
             $this->assertEquals(1, $validator->fails());
         }
 
+
+        public function test_terceiro_formulario(){
+            $fachadaTurma = new FacadesTurma();
+            $dados = $fachadaTurma->inscricaoTerceiroForm(
+            [
+                "status_trabalho" => "trabalhando",
+                "cargo" => "Programador",
+                "ultimocargo" => "teste",
+                "moracomquem" => "pais",
+                "renda" => "De 1 a 2 salários mínimos (de R$ 998,00 até R$ 1.996,00)",
+                "quantidade" => "5",
+                'user_id' => 2
+            ]
+            );
+            $this->assertEquals("trabalhando", $dados->status_trabalho);
+            $this->assertEquals("Programador", $dados->cargo);
+            $this->assertEquals("teste", $dados->ultimo_cargo);
+            $this->assertEquals("pais", $dados->com_quem_mora);
+            $this->assertEquals("De 1 a 2 salários mínimos (de R$ 998,00 até R$ 1.996,00)", $dados->renda);
+            $this->assertEquals("5", $dados->quatidade_moradores_na_casa);
+            $this->assertEquals(2, $dados->user_id);
+        }
+
+
+
 }

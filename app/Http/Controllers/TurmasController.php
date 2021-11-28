@@ -108,8 +108,16 @@ class TurmasController extends Controller
     }
 
     public function InscricaoTerceiroForm(Request $request){
+        $request->validate([
+            'status_trabalho' => 'string',
+            'ultimocargo' => 'nullable|string',
+            'cargo' => 'nullable|string',
+            'moracomquem' => 'required|string',
+            'quantidade' => 'required|string|numeric'
+        ]);
         $facadesTurma = new FacadesTurma();
         $requisicao = $request->all();
+        dd($requisicao);
         $requisicao['user_id'] = Auth::user()->id;
         if($facadesTurma->inscricaoTerceiroForm($requisicao)){
            return redirect()->route('form4');
