@@ -10,6 +10,7 @@ use App\Classes\Permissoes\ValidarPermissaoAdm;
 use App\Classes\Permissoes\VerPerDePRoOUADM;
 use App\Classes\videoslivres\GetVideosDoProf;
 use App\Rules\Adm\ValidarAdministrador;
+use App\Rules\Candidato\ValidarIdadeResponsavel;
 use Illuminate\Support\Facades\Validator;
 
 class ExampleTest extends TestCase
@@ -78,5 +79,26 @@ class ExampleTest extends TestCase
         $this->assertEquals("Pai", $dados->grau_de_parentesco);
         $this->assertEquals(2, $dados->user_id);
     }
+
+        public function   test_idade_do_reponsavel(){
+            $validator = Validator::make(['nascimento_responsavel' => "1964-12-08"], [
+                "nascimento_responsavel" => [new ValidarIdadeResponsavel],
+            ]);
+
+            $this->assertEquals(0, $validator->fails());
+
+            $validator = Validator::make(['nascimento_responsavel' => "2007-12-08"], [
+                "nascimento_responsavel" => [new ValidarIdadeResponsavel],
+            ]);
+
+            $this->assertEquals(1, $validator->fails());
+
+
+            $validator = Validator::make(['nascimento_responsavel' => "1700-12-08"], [
+                "nascimento_responsavel" => [new ValidarIdadeResponsavel],
+            ]);
+
+            $this->assertEquals(1, $validator->fails());
+        }
 
 }
