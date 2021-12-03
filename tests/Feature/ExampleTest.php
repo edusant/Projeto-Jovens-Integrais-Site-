@@ -126,4 +126,20 @@ class ExampleTest extends TestCase
 
 
 
+        public function test_quinto_formulario(){
+            $fachadaTurma = new FacadesTurma();
+            $dados = $fachadaTurma->inscricaoQuintoFormulario(
+            [
+                "escolaridade" => "Ensino Médio (Cursando)",
+                "periodo" => "Vespertino",
+                "user_id" => 2
+            ]
+            );
+            $this->assertEquals("Ensino Médio (Cursando)", $dados->grau);
+            $this->assertEquals("Vespertino", $dados->periodo);
+            $this->assertEquals(2, $dados->user_id);
+        }
+
+
+
 }

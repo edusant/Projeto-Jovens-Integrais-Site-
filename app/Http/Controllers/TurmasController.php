@@ -117,7 +117,6 @@ class TurmasController extends Controller
         ]);
         $facadesTurma = new FacadesTurma();
         $requisicao = $request->all();
-        dd($requisicao);
         $requisicao['user_id'] = Auth::user()->id;
         if($facadesTurma->inscricaoTerceiroForm($requisicao)){
            return redirect()->route('form4');
@@ -135,7 +134,7 @@ class TurmasController extends Controller
     }
 
     public function cadastroQuintoFormulario(Request $request){
-        // dd($request->all());
+        dd($request->all());
         $facadesTurma = new FacadesTurma();
         $requisicao = $request->all();
         $requisicao['user_id'] = Auth::user()->id;
