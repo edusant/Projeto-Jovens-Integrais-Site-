@@ -8,6 +8,7 @@ use App\Rules\Candidato\ValidarTelefone;
 use App\Rules\Turma\RuleVerificarSeHaTurmaAtiva;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class TurmasController extends Controller
 {
@@ -134,7 +135,10 @@ class TurmasController extends Controller
     }
 
     public function cadastroQuintoFormulario(Request $request){
-        dd($request->all());
+        $request->validate([
+                'periodo' => ['nullable','string',  Rule::in([ 'Ensino Fundamental (Cursando)', 'Ensino Fundamental (completo)', 'Ensino Médio (Cursando)', 'Ensino Médio (completo)', 'Ensino Superior (completo)', 'Ensino Superior (Cursando)']),],
+                'escolaridade' => ['string','required', Rule::in(['Matutino', 'Vespertino', 'Noturno', 'Integral'])]
+        ]);
         $facadesTurma = new FacadesTurma();
         $requisicao = $request->all();
         $requisicao['user_id'] = Auth::user()->id;
