@@ -136,9 +136,10 @@ class TurmasController extends Controller
 
     public function cadastroQuintoFormulario(Request $request){
         $request->validate([
-                'periodo' => ['nullable','string',  Rule::in([ 'Ensino Fundamental (Cursando)', 'Ensino Fundamental (completo)', 'Ensino Médio (Cursando)', 'Ensino Médio (completo)', 'Ensino Superior (completo)', 'Ensino Superior (Cursando)']),],
-                'escolaridade' => ['string','required', Rule::in(['Matutino', 'Vespertino', 'Noturno', 'Integral'])]
-        ]);
+                'periodo' => ['nullable','string',  Rule::in(['Matutino', 'Vespertino', 'Noturno', 'Integral']),],
+                'escolaridade' => ['string','required', Rule::in(['Ensino Fundamental (Cursando)', 'Ensino Fundamental (completo)', 'Ensino Médio (Cursando)', 'Ensino Médio (completo)', 'Ensino Superior (completo)', 'Ensino Superior (Cursando)'])]
+                //
+            ]);
         $facadesTurma = new FacadesTurma();
         $requisicao = $request->all();
         $requisicao['user_id'] = Auth::user()->id;
