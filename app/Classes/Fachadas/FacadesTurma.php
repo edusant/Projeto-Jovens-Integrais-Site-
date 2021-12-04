@@ -3,6 +3,7 @@
 namespace App\Classes\Fachadas;
 
 use App\Classes\Candidato\CadastroDoSegundoForms;
+use App\Classes\Candidato\CadastroDoSextoForm;
 use App\Classes\Candidato\CadastroEndereco;
 use App\Classes\Candidato\CadastroPrimeiroForms;
 use App\Classes\Candidato\CadastroQuintoFormulario;
@@ -55,6 +56,11 @@ class FacadesTurma {
 
     public function inscricaoQuintoFormulario($request){
         $cadastro = new CadastroQuintoFormulario();
+        return $cadastro->cadastro($request);
+    }
+
+    public function cadastroDoSextoFomulario($request){
+        $cadastro = new CadastroDoSextoForm();
         return $cadastro->cadastro($request);
     }
 

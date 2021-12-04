@@ -149,5 +149,19 @@ class TurmasController extends Controller
 
     }
 
+    public function cadastroSextoFormulario(Request $request){
+        $request->validate([
+            'historiadesuperacao' => 'required|min:20',
+            'historiaquetedeixoufeliz' => 'required|min:20'
+        ]);
+
+        $facadesTurma = new FacadesTurma();
+        $requisicao = $request->all();
+        $requisicao['user_id'] = Auth::user()->id;
+        if($facadesTurma->cadastroDoSextoFomulario($requisicao)){
+           return redirect()->route('form7');
+        }
+    }
+
     // public function
 }

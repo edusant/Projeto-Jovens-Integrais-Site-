@@ -39,18 +39,15 @@
         <h1>Sobre a sua história de vida</h1>
         <hr>
 
-    <form method="post" id="dadosestu" action="<?= url('Cadastro/cdastrodehistoria') ?>">
+    <form method="post" id="dadosestu" action="{{route('Cadastro.cdastrodehistoria')}}">
       <div class="form-group">
         <div class="form-group">
        <label class="h5">Conte uma história de superação (desafio) que você já viveu.</label>
-       <textarea class="form-control" name="historiadesuperacao" rows="4" cols="11">
-
-       </textarea>
+       <textarea class="form-control" name="historiadesuperacao" rows="4" cols="11"></textarea>
+       @csrf
 
        <label class="h5">Conte uma história que te deixou feliz (motivado, empolgado, etc.).</label>
-       <textarea class="form-control" name="historiaquetedeixoufeliz" rows="4" cols="11">
-
-       </textarea>
+       <textarea class="form-control" name="historiaquetedeixoufeliz" rows="4" cols="11"></textarea>
      </div>
 
   </div>

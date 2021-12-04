@@ -68,7 +68,7 @@ Route::get('Participante/Cadastro/5', function () {
 })->name('form5');
 
 
-
+Route::post('Cadastro/cdastrodehistoria', 'TurmasController@cadastroSextoFormulario')->name('Cadastro.cdastrodehistoria');
 
 
 
